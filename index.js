@@ -119,8 +119,12 @@ Exercise 11:
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 // Complete Exercise 11 below...
-
-
+const odds = [];
+nums.forEach (function(num){
+  if (num%2 !== 0) {
+    odds.push(num);
+  }
+})
 
 console.log('Exercise 11 Result:\n', odds);
 
@@ -134,6 +138,20 @@ Exercise 12:
 
 // Complete Exercise 12 below...
 
+const fizz = [];
+const buzz = [];
+const fizzbuzz = [];
+nums.forEach (function(num){
+  if ((num%3 === 0)&&(num%5 === 0)) {
+    fizz.push(num);
+    buzz.push(num);
+    fizzbuzz.push(num);
+  } else if (num%3 === 0){
+    fizz.push(num);
+  } else if (num%5 === 0){
+     buzz.push(num);
+  }
+})
 
 
 console.log('Exercise 12 Results:');
