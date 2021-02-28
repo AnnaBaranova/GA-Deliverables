@@ -83,7 +83,7 @@ Exercise 8:
 
 // Complete Exercise 8 below...
 
-
+const soyIdx = foods.indexOf("tofu")
 
 console.log('Exercise 8 Result:\n', soyIdx);
 
@@ -94,7 +94,7 @@ Exercise 9:
 */
 
 // Complete Exercise 9 below...
-
+const allFoods = foods.join(" -> ")
 
 
 console.log('Exercise 9 Result:\n', allFoods);
@@ -106,7 +106,7 @@ Exercise 10:
 
 // Complete Exercise 10 below...
 
-
+const hasSoup = foods.includes("soup")
 
 console.log('Exercise 10 Result:\n', hasSoup);
 
