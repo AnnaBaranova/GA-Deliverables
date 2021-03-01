@@ -174,6 +174,7 @@ const numArrays = [
 
 // Complete Exercise 13 below...
 
+const numList = numArrays.pop();
 
 
 console.log('Exercise 13 Result:\n', numList);
@@ -184,7 +185,15 @@ Exercise 14:
 */
 
 // Complete Exercise 14 below...
-
+let num 
+for (i = 0; i< numArrays.length; i++ ) {
+  for (j = 0; j< numArrays[i].length; j++){
+    if (numArrays [i][j]=== 66) {
+      num = numArrays [i][j];
+      break
+    }
+  }
+}
 
 
 console.log('Exercise 14 Result:\n', num);
