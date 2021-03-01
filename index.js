@@ -209,7 +209,7 @@ Exercise 15:
  let total = 0;
  numArrays.forEach(function (num){
    num.forEach (function(num1){
-     total += num1
+     total += num1; 
    })
  })
 
