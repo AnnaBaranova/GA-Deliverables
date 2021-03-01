@@ -174,7 +174,7 @@ const numArrays = [
 
 // Complete Exercise 13 below...
 
-const numList = numArrays.pop();
+const numList = numArrays[numArrays.length - 1]
 
 
 console.log('Exercise 13 Result:\n', numList);
@@ -206,10 +206,11 @@ Exercise 15:
 
 // Complete Exercise 15 below...
 
+
  let total = 0;
- numArrays.forEach(function (num){
-   num.forEach (function(num1){
-     total += num1; 
+ numArrays.forEach(function (arr){
+   arr.forEach (function(el){
+     total += el;
    })
  })
 
