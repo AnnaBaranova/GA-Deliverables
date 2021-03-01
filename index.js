@@ -206,6 +206,12 @@ Exercise 15:
 
 // Complete Exercise 15 below...
 
+ let total = 0;
+ numArrays.forEach(function (num){
+   num.forEach (function(num1){
+     total += num1
+   })
+ })
 
 
 console.log('Exercise 15 Result:\n', total);
