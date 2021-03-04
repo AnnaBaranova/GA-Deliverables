@@ -31,24 +31,29 @@ function maxOfTwoNumbers(x, y) {
       return false 
      }
    }
-   console.log (isCharAVowel("a"));
+   console.log (isCharAVowel("A"));
   
-  let sumArray = function (...nums){
+  let sumArray = function (arr){
     let sum = 0;
-    nums.forEach(function(num) {
+    arr.forEach(function(num) {
       sum+=num
     })
     return sum
    }
   
-  console.log (sumArray(2,4,5))
+  console.log (sumArray([2,4,5]))
   
-  function multiplyArray (...nums) {
+  function multiplyArray (arr) {
     let prod = 1;
-    nums.forEach(function(num) {
+    arr.forEach(function(num) {
       prod*=num
     })
     return prod
   }
   
-  console.log (multiplyArray(2,4,5))
+  console.log (multiplyArray([2,4,5]))
+  
+  const numArgs = function (){
+   return arguments.length;
+  }
+  console.log (numArgs(4,5,6,7,8,9))
