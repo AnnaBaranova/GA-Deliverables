@@ -42,3 +42,13 @@ function maxOfTwoNumbers(x, y) {
    }
   
   console.log (sumArray(2,4,5))
+  
+  function multiplyArray (...nums) {
+    let prod = 1;
+    nums.forEach(function(num) {
+      prod*=num
+    })
+    return prod
+  }
+  
+  console.log (multiplyArray(2,4,5))
