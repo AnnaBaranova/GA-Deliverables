@@ -11,7 +11,7 @@ function maxOfTwoNumbers(x, y) {
   
   console.log(maxOfTwoNumbers(3, 9));
   
-  function maxOfTree (x,y,z) {
+  const maxOfTree = function (x,y,z) {
     if (x > y && x > z) {
       return x;
     } else if (y > x && y > z) {
@@ -22,3 +22,23 @@ function maxOfTwoNumbers(x, y) {
   }
   
   console.log (maxOfTree(10,9,11));
+  
+   function isCharAVowel (char) {
+     formattedChar = char.toLowerCase();
+     if (formattedChar === "a"||formattedChar === "e"||formattedChar === "i"||formattedChar === "o"||formattedChar === "u"){
+       return true
+     } else {
+      return false 
+     }
+   }
+   console.log (isCharAVowel("a"));
+  
+  let sumArray = function (...nums){
+    let sum = 0;
+    nums.forEach(function(num) {
+      sum+=num
+    })
+    return sum
+   }
+  
+  console.log (sumArray(2,4,5))
