@@ -89,6 +89,7 @@ function maxOfTwoNumbers(x, y) {
   
   console.log (reverseString1 ("rockstar"))
   
+  //8.
   const longestStringInArray = function (arr) {
     let longestStr = "";
     arr.forEach(function(str) {
@@ -96,11 +97,12 @@ function maxOfTwoNumbers(x, y) {
         longestStr = str;
       }
     });
-    return longestStr;
+    return longestStr.length;
   }
     
     console.log (longestStringInArray(['say', 'hello', 'in', 'the', 'morning']))
   
+  //9.
     function stringsLongerThan (arr, num) {
       let newArray = [];
       arr.forEach (function (str){
