@@ -100,3 +100,15 @@ function maxOfTwoNumbers(x, y) {
   }
     
     console.log (longestStringInArray(['say', 'hello', 'in', 'the', 'morning']))
+  
+    function stringsLongerThan (arr, num) {
+      let newArray = [];
+      arr.forEach (function (str){
+        if (str.length > num) {
+          newArray.push(str)
+        }
+      })
+      return newArray
+    }
+  
+    console.log (stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3))
