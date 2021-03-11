@@ -1,0 +1,20 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 20vmin;
+    grid-template-rows: repeat(3, 20vmin);
+    border: 2px solid grey;
+  }
+  
+  main div {
+    margin: 2vmin;
+    border-radius: 50%;
+    border: 2px solid grey;
+  }
