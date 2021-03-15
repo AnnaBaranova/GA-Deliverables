@@ -16,40 +16,48 @@
 
 #menu {
   width: 20%;
-  margin: 5%;
+  height: 100%;
+  /* margin: 5%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
+  align-content: space-around;
   
 }
 
 #pics {
   width: 80%;
-  margin: 5%;
+  height: 100%;
+  /* margin: 5%; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
+  align-content: space-around;
 }
 
 .container2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: stretch;
+  align-content: space-around;
+  /* align-items: stretch; */
 }
 
 .container3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch;
+  align-content: space-around;
+  margin: 50px 0px 50px 0px;
+  /* align-items: stretch; */
 }
 
 .wide1 {
-  width: 3852px;
-  margin: 50px;
+  width: 100%;
+  height: 80%;
+  margin: 100px;
 }
 
 .wide2 {
