@@ -52,7 +52,7 @@
 
     margin: 50px;
   }
-
+/* I tested a layout on other screens ann I didn't get the same result as I had had on my Mac. I dont know what was the problem. I assume I have a wrong width*/
   .wide1 {
     width: 100%;
   }
