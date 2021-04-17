@@ -1,7 +1,7 @@
 const students = [
-    {name: "Steve B.", course:"SEI"},
-    {name: "Anna C.", course:"SEI"},
-    {name: "Nik D.", course:"SEI"},
+    {id: 1, name: "Steve B.", course:"SEI"},
+    {id: 2, name: "Anna C.", course:"SEI"},
+    {id: 3, name: "Nik D.", course:"SEI"},
   ];
   
   module.exports = {
