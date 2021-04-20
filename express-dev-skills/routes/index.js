@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const skillsCtrl = require("../controllers/skills.js")
 
-
-router.get("/", skillsCtrl.index);
-router.get("/:id", skillsCtrl.show);
-
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'My awesome developer skills' });
+});
 
 module.exports = router;

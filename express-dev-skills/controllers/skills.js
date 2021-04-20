@@ -9,7 +9,8 @@ function allSkills (req, res) {
 
   function show(req, res) {
     res.render('skills/show', {
-      todo: Skill.getOne(req.params.id)
+      skill: Skill.getOne(req.params.id),
+      skillNum: Skill.getAll().findIndex(skill=> skill.id === parseInt(req.params.id)) + 1
     });
   }
 
@@ -17,4 +18,3 @@ function allSkills (req, res) {
       index: allSkills,
       show,
   }
-  
