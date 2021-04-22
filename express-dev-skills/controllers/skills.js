@@ -28,10 +28,27 @@ function deleteSkill(req, res) {
     res.redirect('/skills');
 };
 
+function editSkill (req, res) {
+    res.render('skills/edit', {
+      skill: Skill.getOne(req.params.id),
+    });
+  }
+
+  function saveEditSkill(req, res) {
+    Skill.editSkill(req.params.id, req.body);
+    res.render('skills/show', {
+        skill: Skill.getOne(req.params.id),
+        skillNum: Skill.getAll().findIndex(skill => skill.id === parseInt(req.params.id)) + 1
+  });
+};
+  
+
 module.exports = {
     index: allSkills,
     show,
     new: newSkill,
     create: createNewSkill,
     delete: deleteSkill,
-}
+    edit: editSkill,
+    saveEditSkill,
+};

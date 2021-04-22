@@ -1,7 +1,7 @@
 const skills = [
-    {id: 111111, skill: 'HTML', level: "medium"},
-    {id: 222222, skill: 'CSS', level: "beginner"},
-    {id: 333333, skill: 'JS', level: "in progress"}
+    {id: 111111, skill: 'HTML', new: false},
+    {id: 222222, skill: 'CSS', new: false},
+    {id: 333333, skill: 'JS', new: true}
   ];
   
   
@@ -15,7 +15,7 @@ const skills = [
 
   function create (skill) {
     skill.id = Date.now()%1000000;
-    skill.level = "in progress";
+    skill.new = true;
     skills.push(skill);
   };
 
@@ -24,9 +24,16 @@ const skills = [
     skills.splice(idx, 1);
   };
 
+  function editSkill (id, skill) {
+    const idx = skills.findIndex(skill => skill.id === parseInt(id));
+    skills[idx].skill = skill.skill;
+  }
+  
+
   module.exports = {
     getAll,
     getOne,
     create,
     deleteOne,
+    editSkill,
   };

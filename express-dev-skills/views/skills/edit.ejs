@@ -1,0 +1,7 @@
+<body>
+    <h1>Edit Skill</h1>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+      <input type="text" name="skill" value = "<%= skill.skill %>">
+      <button type="submit">Update Skill</button>
+    </form>
+  </body>

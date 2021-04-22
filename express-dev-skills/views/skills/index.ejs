@@ -13,13 +13,13 @@
     <a href="/">Home</a>
     <h1>My awesome developer skills</h1>
     <ul>
-        <% skills.forEach(function(t) { %>
+        <% skills.forEach(function(s) { %>
             <li>
-                <a href="/skills/<%= t.id %>">
-                    <%= t.skill %>
+                <a href="/skills/<%= s.id %>">
+                    <%= s.skill %>
                 </a>
                 -
-                <%= t.level %>
+                <%= s.new ? 'new' : 'in progress' %>
             </li>
             <% }); %>
     </ul>
