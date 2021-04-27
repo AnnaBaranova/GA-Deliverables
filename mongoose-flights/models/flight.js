@@ -12,7 +12,7 @@ const flightSchema = new Schema({
         enum: ['AUS', 'DFW', 'DEN', 'LAX','SAN'],
         default: 'DEN',
     },
-    mflightNo: {
+    flightNo: {
         type: Number,
         min: 10,
         max: 9999
@@ -20,12 +20,9 @@ const flightSchema = new Schema({
     departs: {
         type: Date,
         default: function() {
-            let day = new Date();
-            let date = day.getDate();
-            let month = day.getMonth();
-            let year = day.getFullYear();
-            let newDay = new Date (year+1, month, date);
-            return newDay
+            let day = new Date(); 
+            day.setFullYear(d.getFullYear()+1)
+            return day
           },
     }
   });
