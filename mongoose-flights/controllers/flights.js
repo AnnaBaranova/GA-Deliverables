@@ -8,9 +8,14 @@ function allFlights(req, res){
         }
         res.render('flights/index', {flights});
     })
-}
+};
+
+function newFlight(req, res) {
+    res.render('flights/new');
+};
 
 
 module.exports = {
-    index: allFlights
+    index: allFlights,
+    new: newFlight,
 }
