@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partials/header') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Mongoose Flights</title>
-</head>
-
-<body>
-    <h1>Flights List</h1>
     <table>
         <thead>
             <tr>
@@ -18,7 +7,6 @@
                 <th>Airport</th>
                 <th>FlightNo</th>
                 <th>Departs</th>
-                <th>Link</th>
             </tr>
         </thead>
         <tbody>
@@ -35,9 +23,7 @@
                         <%= f.flightNo %>
                     </td>
                     <td>
-                        <%= f.departs %></td>
-                    <td>
-                    
+                        <%= f.departs.toISOString().slice(0, 16) %>
                     </td>
                 </tr>
                 <% }); %>
@@ -45,7 +31,4 @@
         </tbody>
     </table>
 
-    <a href="/flights/new">Add New Flight</a>
-</body>
-
-</html>
+    <%- include('../partials/footer') %>
