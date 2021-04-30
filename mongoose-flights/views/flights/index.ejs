@@ -25,6 +25,7 @@
                     <td>
                         <%= f.departs.toISOString().slice(0, 16) %>
                     </td>
+                    <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
                 </tr>
                 <% }); %>
 

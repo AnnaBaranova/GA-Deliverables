@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+    <section id="show-page">
+        <div>Airline: </div>
+        <div>
+            <%= flight.airline %>
+        </div>
+        <div>Airport: </div>
+        <div>
+            <%= flight.airport %>
+        </div>
+        <div>FlightNo: </div>
+        <div>
+            <%= flight.flightNo %>
+        </div>
+        <div>Departs: </div>
+        <div>
+            <%= flight.departs.toISOString().slice(0, 16) %>
+        </div>
+    </section>
+<br>
+    <h3>Destinations</h3>
+
+    <ul>
+        <% flight.destinations.forEach(function(d) { %>
+          <li>
+            Airport: <%= d.airport %>
+            Arrival: <%= d.arrival.toISOString().slice(0, 16) %>
+          </li>
+        <% }); %>
+      </ul>
+
+    <br>
+    <form id="destination-form" method="POST" action="/flights/<%= flight._id %>/destinations">
+        <label>Airport:
+            <select name="airport">
+                <option value="AUS">AUS</option>
+                <option value="DFW">DFW</option>
+                <option value="DEN">DEN</option>
+                <option value="LAX">LAX</option>
+                <option value="SAN">SAN</option>
+            </select>
+            <label>Arrival:
+                <input type="datetime-local" name="arrival">
+            </label><br>
+
+            <input type="submit" value="Add Destination">
+    </form>
+    
+
+
+    <%- include('../partials/footer') %>
