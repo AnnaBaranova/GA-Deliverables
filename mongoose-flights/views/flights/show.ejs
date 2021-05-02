@@ -40,7 +40,7 @@
                 <option value="SAN">SAN</option>
             </select>
             <label>Arrival:
-                <input type="datetime-local" name="arrival">
+                <input type="datetime-local" name="arrival" value="<%= flight.departs.toISOString().slice(0, 16)%>">
             </label><br>
 
             <input type="submit" value="Add Destination">
