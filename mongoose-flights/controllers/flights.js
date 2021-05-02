@@ -3,12 +3,13 @@ const Ticket = require('../models/ticket');
 
 
 function allFlights(req, res) {
-    Flight.find({}, function (err, flights) {
+    Flight.find({}, function (err, flight) {
+        const sortFlights = flight.slice().sort((a, b) => a.departs - b.departs);
 
         if (err) {
             return console.log(err);
         }
-        res.render('flights/index', { title: 'All Flights', flights });
+        res.render('flights/index', { title: 'All Flights', sortFlights});
     })
 };
 
@@ -17,7 +18,7 @@ function newFlight(req, res) {
 };
 
 function create(req, res) {
-    const flight = new Flight(req.body);
+    const flight = new Flight(req.body);    
     flight.save(function (err) {
         if (err) return res.redirect('/flights/new');
         res.redirect('/flights');
