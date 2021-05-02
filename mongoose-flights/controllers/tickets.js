@@ -15,7 +15,15 @@ function create (req, res){
     })  
 };
 
+function deleteTicket (req, res) {
+Ticket.findOneAndDelete(req.params.ticketId, function (err, ticket){
+    res.redirect(`/flights/${req.params.flightId}`); 
+});
+};
+
+
 module.exports = {
     new: newTicket,
     create,
+    delete: deleteTicket,
 }
