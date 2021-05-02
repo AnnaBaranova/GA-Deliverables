@@ -19,10 +19,10 @@
       </select>
   </label><br>
   <label>FlightNo:
-    <input type="number" name="flightNo">
+    <input type="number" name="flightNo" value="10">
   </label><br>
   <label>DepartsDate
-    <input type="datetime-local" name="departs">
+    <input type="datetime-local" name="departs" value="<%= (new Date()).toISOString().slice(0, 16)%>">
   </label><br>
   <input type="submit" value="Add Flight">
 </form>
