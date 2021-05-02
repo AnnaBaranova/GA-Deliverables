@@ -18,7 +18,6 @@ function newFlight(req, res) {
 
 function create(req, res) {
     const flight = new Flight(req.body);
-    console.log(flight);
     flight.save(function (err) {
         if (err) return res.redirect('/flights/new');
         res.redirect('/flights');
@@ -28,8 +27,9 @@ function create(req, res) {
 
 function show(req, res) {
     Flight.findById(req.params.id, function (err, flight) {
+        const destinations = flight.destinations.slice().sort((a, b) => a.arrival - b.arrival);
         Ticket.find({ flight: flight._id }, function (err, tickets) {
-            res.render('flights/show', { title: 'Flight Detail', flight, tickets });
+            res.render('flights/show', { title: 'Flight Detail', flight, destinations, tickets });
         });
     });
 };

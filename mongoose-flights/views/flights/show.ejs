@@ -21,7 +21,7 @@
     <h3>Destinations</h3>
 
     <ul>
-        <% flight.destinations.forEach(function(d) { %>
+        <% destinations.forEach(function(d) { %>
           <li>
             Airport: <%= d.airport %>
             Arrival: <%= d.arrival.toISOString().slice(0, 16) %>
