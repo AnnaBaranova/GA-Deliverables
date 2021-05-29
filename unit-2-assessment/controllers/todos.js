@@ -17,7 +17,15 @@ function create(req, res) {
     res.redirect('/')
 }
 
+function deleteOne (req, res) {
+ console.log('delete')
+ console.log(req.params.id)
+ Todos.deleteOne(req.params.id)
+ res.redirect('/')
+}
+
 module.exports = {
     index,
     create,
+    delete: deleteOne
 }
