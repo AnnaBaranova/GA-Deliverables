@@ -19,9 +19,9 @@
           <%= todo.todo%>
             -
             <%= todo.done ? 'done' : 'not done' %>
-            <form action="/<%=idx%>?_method=DELETE" method="POST">
-            <button type="submit">DELETE</button>
-            </form>
+              <form action="/<%=idx%>?_method=DELETE" method="POST">
+                <button type="submit">DELETE</button>
+              </form>
         </li>
       </ul>
       <% }); %>

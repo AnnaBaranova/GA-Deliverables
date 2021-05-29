@@ -5,11 +5,11 @@ function getAll() {
 };
 function addOne(todo) {
   todos.push(todo);
-}
+};
 
-function deleteOne (idx) {
+function deleteOne(idx) {
   todos.splice(idx, 1)
-}
+};
 
 module.exports = {
   getAll,
