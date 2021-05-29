@@ -5,7 +5,25 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>To Do List</h1>
+
+    
+      <% if(todos.length){ %>
+      <% todos.forEach(function(todo) { %>
+        <ul>
+          <li>
+              <%= todo.todo%>
+              -
+              <%= todo.done ? 'done' : 'not done' %>
+          </li>
+        </ul>
+          <% }); %>
+          <% } else { %>
+            <h3>There are no To Dos yet!</h3>
+
+            <% }; %>
+            
+
+   
   </body>
 </html>
