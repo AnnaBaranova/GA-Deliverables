@@ -19,3 +19,39 @@
 #
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
+
+month = input('Enter the month of the year (Jan - Dec):')
+day = int(input('Enter the day of the month:'))
+
+if month in ('Jan', 'Feb'):
+    print(f'{month} {day} is in Winter')
+elif month == 'Dec':
+    if day >= 21:
+        print(f'{month} {day} is in Winter')
+    else:
+        print(f'{month} {day} is in Fall')
+elif month == 'Mar':
+    if day >= 20:
+        print(f'{month} {day} is in Spring')
+    else:
+        print(f'{month} {day} is in Winter')
+elif month in ('Apr', 'May'):
+    print(f'{month} {day} is in Spring')
+elif month == 'Jun':
+    if day >= 21:
+        print(f'{month} {day} is in Summer')
+    else:
+        print(f'{month} {day} is in Spring')
+elif month in ('Jul', 'Aug'):
+    print(f'{month} {day} is in Summer')
+elif month == 'Sep':
+    if day >= 22:
+        print(f'{month} {day} is in Fall')
+    else:
+        print(f'{month} {day} is in Summer')
+else:
+    print(f'{month} {day} is in Fall')
+
+
+
+
