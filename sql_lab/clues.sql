@@ -25,6 +25,7 @@ SELECT language FROM countrylanguage
 -- nearby country speaks nothing but that language.
 
 -- Write SQL query here
+--solution 1
 SELECT countrycode, COUNT(countrycode) 
 FROM countrylanguage
 FULL OUTER JOIN country ON code = countrycode
@@ -46,6 +47,15 @@ AS countries
 FULL OUTER JOIN country ON code = countries.countrycode
 WHERE region LIKE 'Southern Europe';
 
+
+--solution 2
+SELECT country.name as country, count(countrylanguage.language) as languages_count FROM countrylanguage
+LEFT JOIN country ON country.code = countrylanguage.countrycode
+WHERE country.code IN (
+    SELECT countrycode FROM countrylanguage
+    WHERE language LIKE 'Italian'
+) AND country.region LIKE 'Southern Europe'
+GROUP BY country.name;
 
 \echo 'END 3'
 
