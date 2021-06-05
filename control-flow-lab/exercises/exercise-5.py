@@ -12,3 +12,18 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+max_term = 50
+
+num1 = 0
+num2 = 1
+count = 0
+
+while count < max_term:
+    print(f'term: {count} / number: {num1}')
+    num = num1 + num2
+    num1 = num2
+    num2 = num
+    count += 1
+    
+
